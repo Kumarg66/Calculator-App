@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:gravity="end|bottom"
+        android:padding="10dp"
+        android:textColor="@color/light_orange"
+        android:textSize="40sp"
+        app:layout_constraintBottom_toTopOf="@+id/tv_result"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_result"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="5dp"
+        android:gravity="end"
+        android:text=""
+        android:textColor="@color/text_color"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toTopOf="@+id/l1"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/l1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/l2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/clearAll"
+                style="@style/number_text_style"
+                android:text="CLR"
+                app:layout_constraintEnd_toStartOf="@+id/clearOne"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/clearOne"
+                style="@style/number_text_style"
+                android:scaleType="center"
+                android:text="x"
+                app:layout_constraintEnd_toStartOf="@+id/operatorroot"
+                app:layout_constraintStart_toEndOf="@+id/clearAll"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/operatorroot"
+                style="@style/number_text_style"
+                android:onClick="root"
+                android:scaleType="center"
+                android:text="√"
+                app:layout_constraintEnd_toStartOf="@+id/bracketstart"
+                app:layout_constraintStart_toEndOf="@+id/clearOne"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/bracketstart"
+                style="@style/number_text_style"
+                android:text="("
+                app:layout_constraintEnd_toStartOf="@+id/bracketend"
+                app:layout_constraintStart_toEndOf="@+id/operatorroot"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/bracketend"
+                style="@style/number_text_style"
+                android:text=")"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/bracketstart"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/l3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/l2">
+
+            <TextView
+                android:id="@+id/showView7"
+                style="@style/number_text_style"
+                android:text="@string/seven"
+                app:layout_constraintEnd_toStartOf="@+id/showView8"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/showView8"
+                style="@style/number_text_style"
+                android:text="@string/eight"
+                app:layout_constraintEnd_toStartOf="@+id/showView9"
+                app:layout_constraintStart_toEndOf="@+id/showView7"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/showView9"
+                style="@style/number_text_style"
+                android:text="@string/nine"
+                app:layout_constraintEnd_toStartOf="@+id/operatordivide"
+                app:layout_constraintStart_toEndOf="@+id/showView8"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/operatordivide"
+                style="@style/number_text_style"
+                android:text="@string/divide"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/showView9"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/l4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/l3">
+
+            <TextView
+                android:id="@+id/showView4"
+                style="@style/number_text_style"
+                android:text="@string/four"
+                app:layout_constraintEnd_toStartOf="@+id/showView5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/showView5"
+                style="@style/number_text_style"
+                android:text="@string/five"
+                app:layout_constraintEnd_toStartOf="@+id/showView6"
+                app:layout_constraintStart_toEndOf="@+id/showView4"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/showView6"
+                style="@style/number_text_style"
+                android:text="@string/six"
+                app:layout_constraintEnd_toStartOf="@+id/operatormul"
+                app:layout_constraintStart_toEndOf="@+id/showView5"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/operatormul"
+                style="@style/number_text_style"
+                android:text="@string/multiply"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/showView6"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/l5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/l4">
+
+
+            <TextView
+                android:id="@+id/showView1"
+                style="@style/number_text_style"
+                android:text="@string/one"
+                app:layout_constraintEnd_toStartOf="@+id/showView2"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/showView2"
+                style="@style/number_text_style"
+                android:text="@string/two"
+                app:layout_constraintEnd_toStartOf="@+id/showView3"
+                app:layout_constraintStart_toEndOf="@+id/showView1"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/showView3"
+                style="@style/number_text_style"
+                android:text="@string/three"
+                app:layout_constraintEnd_toStartOf="@+id/operatorplus"
+                app:layout_constraintStart_toEndOf="@+id/showView2"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/operatorplus"
+                style="@style/number_text_style"
+                android:text="@string/sum"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/showView3"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/l6"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/l5">
+
+
+            <TextView
+                android:id="@+id/dot"
+                style="@style/number_text_style"
+                android:text="."
+                android:textStyle="bold"
+                app:layout_constraintEnd_toStartOf="@+id/zero"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/zero"
+                style="@style/number_text_style"
+                android:text="0"
+                app:layout_constraintEnd_toStartOf="@+id/equal"
+                app:layout_constraintStart_toEndOf="@+id/dot"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/equal"
+                style="@style/number_text_style"
+                android:onClick="equal"
+                android:text="="
+                android:textStyle="bold"
+                app:layout_constraintEnd_toStartOf="@+id/operatorminus"
+                app:layout_constraintStart_toEndOf="@+id/zero"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/operatorminus"
+                style="@style/number_text_style"
+                android:text="@string/subtract"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/equal"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
